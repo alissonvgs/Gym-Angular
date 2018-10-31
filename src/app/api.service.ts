@@ -6,7 +6,7 @@ import { RequestOptions, Headers, RequestMethod, RequestOptionsArgs } from '@ang
 @Injectable()
 export class ApiService {
 
-  url: string = 'http://localhost:4200/api/';
+  url:   'http://localhost:4200/api/';
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }

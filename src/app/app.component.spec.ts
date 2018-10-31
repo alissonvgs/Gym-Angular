@@ -21,7 +21,7 @@ describe('AppComponent', () => {
         FormEquipamentoComponent,
         ViewEquipamentoComponent
       ],
-      imports:[
+      imports: [
         RouterModule.forRoot(routes),
         FormsModule
       ],
