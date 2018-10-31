@@ -14,5 +14,10 @@
     {{funcionario.cpf}}
   </p>
 
-  <a [routerLink] = "['/funcionarios/edit/', funcionario.id]">Editar</a> | <a [routerLink]="['/'] ">Voltar</a>
+  <div>
+    <button type="submit" class="btn btn-primary">Deletar</button>
+    </div>
+
+
+  <a [routerLink] = "['/funcionarios/edit/', funcionario.id]">Editar</a> || <a [routerLink]="['/funcionarios'] ">Voltar</a>
 </div>

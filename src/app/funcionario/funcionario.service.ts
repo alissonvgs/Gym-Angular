@@ -34,7 +34,7 @@ export class FuncionarioService implements OnInit {
 
   delete(id: number): any {
     console.log('delete service');
-    return this.apiService.delete('funcionarios/', id);
+    return this.apiService.delete('funcionarios', id);
   }
 
   update(newFuncionario: Funcionario, id: number) {

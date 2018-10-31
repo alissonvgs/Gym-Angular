@@ -21,8 +21,16 @@
           <td>{{funcionario.cpf}}</td>
           <td>{{ funcionario.dataNascimento }}</td>
           
+
+          <td>
+            <div class="btn-group-sm" role="group" aria-label="Basic example">
+            <button type="button" href="#" (click)="show(funcionario.id)" class="btn btn-secondary">Visualizar</button>
+            <button type="button" href="#" (click)="edit(funcionario.id)" class="btn btn-secondary">Editar</button>
+            <button type="button" href="#" (click)="destroy(funcionario.id)" class="btn btn-secondary">Deletar</button>
+            </div>
+          </td>
+
         </tr>
       </tbody>
     </table>
-
 </div>
