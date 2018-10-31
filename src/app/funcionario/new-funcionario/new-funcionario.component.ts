@@ -27,7 +27,7 @@ export class NewFuncionarioComponent implements OnInit{
                   alert('Funcionario cadastrado!');
     this.router.navigate(['funcionarios/', result['id']]);
     },
-    error => {alert('Um erro aconteceu, tente novamente');})
+    error => {alert('Um erro aconteceu, tente novamente'); });
 
   }
 

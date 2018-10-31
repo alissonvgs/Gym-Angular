@@ -21,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormEquipamentoComponent } from './equipamento/form-equipamento/form-equipamento.component';
 import { ViewEquipamentoComponent } from './equipamento/view-equipamento/view-equipamento.component';
 import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-equipamento.component';
+import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-eq
     FormEquipamentoComponent,
     ViewEquipamentoComponent,
     ListEquipamentoComponent,
-    DashboardComponent
+    DashboardComponent,
+    EditClienteComponent
   ],
   imports: [
     BrowserModule,
