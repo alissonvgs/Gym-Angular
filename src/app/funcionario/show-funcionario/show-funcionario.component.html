@@ -1,0 +1,18 @@
+<div class="container-fluid"><div id="showPanel" *ngIf="funcionario">
+  <p>
+    <strong> 
+      dados de: {{funcionario.name}}
+    </strong>
+    </p>
+
+  <p>
+  <strong>Data de Nascimento:</strong>
+    {{funcionario.dataNascimento}}
+  </p>
+  <p>
+  <strong>CPF:</strong>
+    {{funcionario.cpf}}
+  </p>
+
+  <a [routerLink] = "['/funcionarios/edit/', funcionario.id]">Editar</a> | <a [routerLink]="['/'] ">Voltar</a>
+</div>

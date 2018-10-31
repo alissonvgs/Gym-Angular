@@ -1,0 +1,25 @@
+<div class="container-fluid"><h1>Edit Equipamento</h1>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+        <div class="form-group">
+            <label for="paciente_nome">Name</label>
+            <input type="text" class="form-control" id="equipamento_nome" name="nome" placeholder="Nome" [ngModel]="equipamento.nome">
+        </div>
+        <div class="form-group">
+            <label for="paciente_raca">Peso</label>
+            <input type="text" class="form-control" id="equipamento_peso" name="peso" placeholder="Peso" [ngModel]="equipamento.peso">
+        </div>
+        <div class="form-group">
+            <label for="paciente_dataNascimento">Tipo</label>
+            <input type="text" class="form-control" id="equipamento_tipo" name="tipo" placeholder="Tipo" [ngModel]="equipamento.tipo">
+        </div>
+        <div class="form-group">
+            <label for="paciente_cpf">Descrição</label>
+            <input type="text" class="form-control" id="equipamento_descricao" name="descricao" placeholder="Descrição" [ngModel]="equipamento.descricao">
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Atualizar</button>
+    </form>
+    
+    <a [routerLink]="['/equipamentos']">Voltar</a>
+  </div>
