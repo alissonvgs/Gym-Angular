@@ -1,0 +1,23 @@
+<div class="container-fluid"><h1>New Funcionario</h1>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+      <div class="form-group">
+          <label for="cliente_name">name</label>
+          <input type="text" class="form-control" id="cliente_name" name="name" placeholder="name completo" ngModel>
+      </div>
+      <div class="form-group">
+          <label for="cliente_dataNascimento">Data de Nascimento</label>
+          <input type="text" class="form-control" id="cliente_dataNascimento" name="dataNascimento" placeholder="DD/MM/AAAA" ngModel>
+      </div>
+      <div class="form-group">
+          <label for="cliente_cpf">CPF</label>
+          <input type="text" class="form-control" id="cliente_cpf" name="cpf" placeholder="CPF" ngModel>
+      </div>
+      
+      <div>
+      <button type="submit" class="btn btn-primary">Adicionar</button>
+      </div>
+  </form>
+
+  <a [routerLink]="['/clientes']">Voltar</a>
+</div>

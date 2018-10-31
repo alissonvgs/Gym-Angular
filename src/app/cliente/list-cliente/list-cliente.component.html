@@ -1,0 +1,36 @@
+<div class="container-fluid"><h1>Funcionarios <button href="#" [routerLink]="['/clientes', 'new']" type="button" class="btn btn-primary">
+  Adicionar
+</button></h1>
+
+<div id="notificationMessage" *ngIf="!clientes" class="alert alert-da" role="alert">
+    Lista de clientes vazia
+  </div>
+
+<table *ngIf="clientes" class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">CPF</th>
+        <th scope="col">dataNascimento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <th scope="row">{{cliente.id}}</th>
+        <td>{{cliente.name}}</td>
+        <td>{{cliente.cpf}}</td>
+        <td>{{ cliente.dataNascimento }}</td>
+        
+
+        <td>
+          <div class="btn-group-sm" role="group" aria-label="Basic example">
+          <button type="button" href="#" (click)="show(cliente.id)" class="btn btn-secondary">Visualizar</button>
+          <button type="button" href="#" (click)="edit(cliente.id)" class="btn btn-secondary">Editar</button>
+          <button type="button" href="#" (click)="destroy(cliente.id)" class="btn btn-secondary">Deletar</button>
+          </div>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

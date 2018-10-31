@@ -1,3 +1,4 @@
+import { ClienteService } from './cliente/cliente.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +23,9 @@ import { FormEquipamentoComponent } from './equipamento/form-equipamento/form-eq
 import { ViewEquipamentoComponent } from './equipamento/view-equipamento/view-equipamento.component';
 import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-equipamento.component';
 import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
+import { ListClienteComponent } from './cliente/list-cliente/list-cliente.component';
+import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component';
+import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.compon
     ViewEquipamentoComponent,
     ListEquipamentoComponent,
     DashboardComponent,
-    EditClienteComponent
+    EditClienteComponent,
+    ListClienteComponent,
+    NewClienteComponent,
+    ShowClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +53,7 @@ import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.compon
   providers: [
     AppService,
     FuncionarioService,
+    ClienteService,
     ApiService
   ],
   bootstrap: [AppComponent]

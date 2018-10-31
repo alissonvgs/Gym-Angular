@@ -1,3 +1,6 @@
+import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component';
+import { ListClienteComponent } from './cliente/list-cliente/list-cliente.component';
+import { ClienteService } from './cliente/cliente.service';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -10,6 +13,8 @@ import { EquipamentoService } from '../app/equipamento/shared/equipamento.servic
 import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-equipamento.component';
 import { FormEquipamentoComponent } from './equipamento/form-equipamento/form-equipamento.component';
 import { ViewEquipamentoComponent } from './equipamento/view-equipamento/view-equipamento.component';
+import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
+import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.component';
 
 
 describe('AppComponent', () => {
@@ -19,7 +24,11 @@ describe('AppComponent', () => {
         AppComponent,
         ListEquipamentoComponent,
         FormEquipamentoComponent,
-        ViewEquipamentoComponent
+        ViewEquipamentoComponent,
+        ListClienteComponent,
+        EditClienteComponent,
+        NewClienteComponent,
+        ShowClienteComponent
       ],
       imports: [
         RouterModule.forRoot(routes),
@@ -28,6 +37,7 @@ describe('AppComponent', () => {
       providers: [
         {provide: APP_BASE_HREF, useValue : '/' },
         EquipamentoService,
+        ClienteService,
         AppService
 ]
     }).compileComponents();
