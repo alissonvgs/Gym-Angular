@@ -21,7 +21,8 @@ export class NewFuncionarioComponent implements OnInit{
   onSubmit(form: any) {
 
     this.funcionarioService.add(JSON.stringify(
-      new Funcionario(form.name, form.dataNascimento, form.cpf, form.telefone, form.email, form.endereco, form.salario, form.categoria)))
+      new Funcionario(form.name, form.dataNascimento,
+        form.cpf)))
       .subscribe((result) => {console.log(result);
                   alert('Funcionario cadastrado!');
     this.router.navigate(['funcionarios/', result['id']]);

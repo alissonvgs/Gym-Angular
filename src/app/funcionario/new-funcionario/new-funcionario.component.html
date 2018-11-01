@@ -1,45 +1,23 @@
-<div class="container-fluid"><h1>Cadastrar Funcionário</h1>
-    <div class="form">
+<div class="container-fluid"><h1>New Funcionario</h1>
+
     <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
         <div class="form-group">
-            <label for="funcionario_name">Nome</label>
-            <input type="text" class="form-control form-control-sm" id="funcionario_name" name="name" placeholder="Nome Completo" ngModel>
+            <label for="funcionario_name">name</label>
+            <input type="text" class="form-control" id="funcionario_name" name="name" placeholder="name completo" ngModel>
         </div>
         <div class="form-group">
             <label for="funcionario_dataNascimento">Data de Nascimento</label>
-            <input type="text" class="form-control form-control-sm" id="funcionario_dataNascimento" name="dataNascimento" placeholder="DD/MM/AAAA" ngModel>
+            <input type="text" class="form-control" id="funcionario_dataNascimento" name="dataNascimento" placeholder="DD/MM/AAAA" ngModel>
         </div>
         <div class="form-group">
             <label for="funcionario_cpf">CPF</label>
-            <input type="text" class="form-control form-control-sm" id="funcionario_cpf" name="cpf" placeholder="CPF" ngModel>
-        </div>
-        <div class="form-group">
-            <label for="funcionario_telefone">Telefone</label>
-            <input type="text" class="form-control form-control-sm" id="funcionario_telefone" name="telefone" placeholder="Telefone" ngModel>
-        </div>
-        <div class="form-group">
-            <label for="funcionario_email">Email</label>
-            <input type="text" class="form-control form-control-sm" id="funcionario_email" name="email" placeholder="Email" ngModel>
-        </div>
-        <div class="form-group">
-            <label for="funcionario_endereco">Endereço</label>
-            <input type="text" class="form-control form-control-sm" id="funcionario_endereco" name="endereco" placeholder="Rua da Prefeitura, 01" ngModel>
-        </div>
-        <div class="form-group">
-            <label for="funcionario_salario">Salário</label>
-            <input type="text" class="form-control form-control-sm" id="funcionario_salario" name="salario" placeholder="7500" ngModel>
-        </div>
-        <div class="form-group">
-            <label for="funcionario_cargaHoraria">Carga Horária</label>
-            <input type="text" class="form-control form-control-sm" id="funcionario_cargaHoraria" name="cargaHoraria" placeholder="Carga Horária" ngModel>
+            <input type="text" class="form-control" id="funcionario_cpf" name="cpf" placeholder="CPF" ngModel>
         </div>
         
         <div>
-        <button type="submit" class="btn btn-warning">Adicionar</button>
-        <button type="button" class="btn" style="background-color: black"> <a [routerLink]="['/funcionarios']" style="color: white">Voltar</a></button>
+        <button type="submit" class="btn btn-primary">Adicionar</button>
         </div>
     </form>
 
-   
-    </div>
+    <a [routerLink]="['/funcionarios']">Voltar</a>
 </div>
