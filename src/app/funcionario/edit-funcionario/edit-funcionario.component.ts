@@ -22,9 +22,9 @@ export class EditFuncionarioComponent implements OnInit {
     this.route.params
     .subscribe(params => {const id = params['id'];
       if (id) {
-        this.funcionarioService.getById(id).subscribe((func: any) => {
-          if (func) {
-            this.funcionario = func;
+        this.funcionarioService.getById(id).subscribe((funcionario: any) => {
+          if (funcionario) {
+            this.funcionario = funcionario;
             this.id = id;
 
           } else {
@@ -40,8 +40,13 @@ export class EditFuncionarioComponent implements OnInit {
     this.funcionario.name = form.name;
     this.funcionario.dataNascimento = form.dataNascimento;
     this.funcionario.cpf = form.cpf;
-    this.funcionarioService.update(this.funcionario, this.id)
-    .subscribe((result) => {console.log(result);
+    this.funcionario.cargaHoraria = form.cargaHoraria;
+    this.funcionario.email = form.email;
+    this.funcionario.endereco = form.endereco;
+    this.funcionario.telefone = form.telefone;
+    this.funcionario.salario = form.salario;
+    this.funcionarioService.update(this.funcionario, this.id).subscribe((result) => {
+      console.log(result);
       alert('Funcionario atualizado!');
       this.router.navigate(['/funcionarios/', result['id']]);
     }, error => { alert('Um erro aconteceu, tente novamente!'); });
