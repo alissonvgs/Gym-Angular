@@ -1,23 +1,42 @@
+<h1>Dados de {{equipamento.name}}</h1>
+
+<div class="form">
+<table class="table table-striped">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Nome:</th>
+      <td>{{equipamento.name}}</td>
+      </tr>
+    <tr>
+      <th scope="row">Peso:</th>
+      <td>{{equipamento.peso}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Tipo:</th>
+      <td>{{equipamento.tipo}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Descrição:</th>
+      <td>{{equipamento.descricao}}</td>
+    </tr>
+    
+  </tbody>
+</table>
+
 <div class="container-fluid"><div id="showPanel" *ngIf="equipamento">
-  <p>
-    <strong> 
-      dados de: {{equipamento.name}}
-    </strong>
-    </p>
 
-  <p>
-  <strong>Peso:</strong>
-    {{equipamento.peso}}
-  </p>
-  <p>
-  <strong>Tipo:</strong>
-    {{equipamento.tipo}}
-  </p>
-
-  <div>
-    <button type="submit" class="btn btn-primary">Deletar</button>
+  <div style="margin-left: 40%">
+    <button type="button" href="#" (click)="destroy(equipamento.id)" class="btn btn-secondary">Deletar</button>
+    <a [routerLink] = "['/equipamentos/edit/', equipamento.id]"><button type="button" href="#" (click)="edit(equipamento.id)" class="btn btn-secondary">Editar</button></a> 
+    <a [routerLink]="['/equipamentos'] "><button type="button" href="#" class="btn btn-primary">Voltar</button></a>
     </div>
+    <div class="btn-group-sm" role="group" aria-label="Basic example">
+
+      </div>
 
 
-  <a [routerLink] = "['/equipamentos/edit/', equipamento.id]">Editar</a> || <a [routerLink]="['/equipamentos'] ">Voltar</a>
+</div>
+
 </div>

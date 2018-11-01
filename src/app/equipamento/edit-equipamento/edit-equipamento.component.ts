@@ -40,13 +40,10 @@ export class EditEquipamentoComponent implements OnInit {
     this.equipamento.name = form.name;
     this.equipamento.peso = form.peso;
     this.equipamento.tipo = form.tipo;
+    this.equipamento.descricao = form.descricao;
     this.equipamentoService.update(this.equipamento, this.id)
     .subscribe((result) => {console.log(result);
-<<<<<<< HEAD
       alert('Equipamento atualizado!');
-=======
-      alert('Funcionario atualizado!');
->>>>>>> origin/master
       this.router.navigate(['/equipamentos/', result['id']]);
     }, error => { alert('Um erro aconteceu, tente novamente!'); });
   }

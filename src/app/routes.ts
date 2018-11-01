@@ -17,21 +17,12 @@ import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.compon
 import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
 
 export const routes: Routes = [
-<<<<<<< HEAD
   { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-
-  { path: 'equipamentos' , component: ListEquipamentoComponent},
-  { path: 'equipamentos/new', component: NewEquipamentoComponent},
-  { path: 'equipamentos/:id', component: ShowEquipamentoComponent},
-  { path: 'equipamentos/edit/:id', component: EditEquipamentoComponent},
-=======
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
->>>>>>> origin/master
 
   { path: 'equipamentos', component: ListEquipamentoComponent },
   { path: 'equipamentos/new', component: NewEquipamentoComponent },
   { path: 'equipamentos/:id', component: ShowEquipamentoComponent },
-  { path: 'equipamento/edit/:id', component: EditEquipamentoComponent },
+  { path: 'equipamentos/edit/:id', component: EditEquipamentoComponent },
 
   { path: 'funcionarios', component: ListFuncionarioComponent },
   { path: 'funcionarios/new', component: NewFuncionarioComponent },

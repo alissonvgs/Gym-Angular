@@ -57,8 +57,4 @@ export class ListEquipamentoComponent implements OnInit {
     }
     return false;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 }

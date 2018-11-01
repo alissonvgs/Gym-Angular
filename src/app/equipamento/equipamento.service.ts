@@ -38,13 +38,8 @@ export class EquipamentoService implements OnInit {
   }
 
   update(newEquipamento: Equipamento, id: number) {
-<<<<<<< HEAD:src/app/equipamento/equipamento.service.ts
     return this.apiService.put('equipamentos/' + id , newEquipamento);
 }
-=======
-    return this.apiService.put('equipamentos' + id, newEquipamento);
-  }
->>>>>>> origin/master:src/app/equipamento/equipamento.service.ts
 
 
   getAll(endpoint: any): any {
