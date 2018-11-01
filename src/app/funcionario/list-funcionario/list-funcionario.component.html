@@ -1,36 +1,45 @@
-<div class="container-fluid"><h1>Funcionarios <button href="#" [routerLink]="['/funcionarios', 'new']" type="button" class="btn btn-primary">
-    Adicionar
-  </button></h1>
+<div class="container-fluid" style="color: yellow">
 
+    
+            <h1 style = "text-align: center">Funcionarios </h1>
+            
   <div id="notificationMessage" *ngIf="!funcionarios" class="alert alert-da" role="alert">
       Lista de funcionarios vazia
     </div>
-
-  <table *ngIf="funcionarios" class="table">
+<div class="form">
+  <table *ngIf="funcionarios" class="table table-striped"  style="text-align: center" >
       <thead>
-        <tr>
+        <tr style="color:black">
+          <th scope="col">ID</th>
           <th scope="col">Nome</th>
           <th scope="col">CPF</th>
-          <th scope="col">dataNascimento</th>
+          <th scope="col">Email</th>
+          <th scope="col">Opções</th>
         </tr>
       </thead>
-      <tbody>
-        <tr *ngFor="let funcionario of funcionarios">
+      <tbody style="color: black;" >
+        <tr *ngFor="let funcionario of funcionarios" style="background-color: white">
           <th scope="row">{{funcionario.id}}</th>
           <td>{{funcionario.name}}</td>
           <td>{{funcionario.cpf}}</td>
-          <td>{{ funcionario.dataNascimento }}</td>
+          <td>{{ funcionario.email }}</td>
           
 
           <td>
             <div class="btn-group-sm" role="group" aria-label="Basic example">
-            <button type="button" href="#" (click)="show(funcionario.id)" class="btn btn-secondary">Visualizar</button>
+            <button type="button" href="#" (click)="show(funcionario.id)" class="btn btn-success">Visualizar</button>
             <button type="button" href="#" (click)="edit(funcionario.id)" class="btn btn-secondary">Editar</button>
-            <button type="button" href="#" (click)="destroy(funcionario.id)" class="btn btn-secondary">Deletar</button>
+            <button type="button" href="#" (click)="destroy(funcionario.id)" class="btn btn-danger">Deletar</button>
             </div>
           </td>
 
         </tr>
       </tbody>
     </table>
+
+    <button href="#" [routerLink]="['/funcionarios', 'new']" type="button" class="btn btn-warning" style="margin-left: 47%">
+      Adicionar
+    </button>
+</div>
+
 </div>

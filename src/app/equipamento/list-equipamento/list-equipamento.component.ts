@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
-
-import { EquipamentoService } from '../equipamento.service';
 import { ApiService } from 'app/api.service';
-import { Equipamento } from '../equipamento';
+
+import { EquipamentoService } from '../shared/equipamento.service';
+import { Equipamento } from '../shared/equipamento';
 
 @Component({
   selector: 'app-list-equipamento',
@@ -14,25 +13,26 @@ import { Equipamento } from '../equipamento';
 export class ListEquipamentoComponent implements OnInit {
 
   message: string;
-  equipamentos: Array<any> = [];
+  equipamento: Array<any> = [];
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private service: EquipamentoService,
-    private api: ApiService) {
+    private api: ApiService
+
+  ) { }
+  
+  ngOnInit() {
+    this.service.getAll().subscribe(data => {
+      this.equipamento = data;});
   }
 
-   ngOnInit() {
-
-     this.service.getAll('equipamentos').subscribe(data => {
-      console.log(data);
-      this.equipamentos = data;
-    });
-
+  getEquipamento() {
+    this.equipamento = this.service.getAll();
   }
 
-  reload() {
+  reload(){
     alert('Apagado com sucesso!');
     window.location.reload();
   }
@@ -57,5 +57,6 @@ export class ListEquipamentoComponent implements OnInit {
     }
     return false;
   }
+
 
 }

@@ -6,24 +6,21 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
+
+
 import { routes } from './routes';
-import { ApiService } from './api.service';
-import { HttpClientModule } from '@angular/common/http';
-
-
 import { ListFuncionarioComponent } from './funcionario/list-funcionario/list-funcionario.component';
 import { NewFuncionarioComponent } from './funcionario/new-funcionario/new-funcionario.component';
 import { FuncionarioService } from './funcionario/funcionario.service';
 import { ShowFuncionarioComponent } from './funcionario/show-funcionario/show-funcionario.component';
+import { ApiService } from './api.service';
+import { HttpClientModule } from '@angular/common/http';
 import { EditFuncionarioComponent } from './funcionario/edit-funcionario/edit-funcionario.component';
-
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { NewEquipamentoComponent } from './equipamento/new-equipamento/new-equipamento.component';
-import { ShowEquipamentoComponent } from './equipamento/show-equipamento/show-equipamento.component';
+import { FormEquipamentoComponent } from './equipamento/form-equipamento/form-equipamento.component';
+import { ViewEquipamentoComponent } from './equipamento/view-equipamento/view-equipamento.component';
 import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-equipamento.component';
-import { EditEquipamentoComponent } from './equipamento/edit-equipamento/edit-equipamento.component';
-import { EquipamentoService } from './equipamento/equipamento.service';
 
 @NgModule({
   declarations: [
@@ -32,10 +29,9 @@ import { EquipamentoService } from './equipamento/equipamento.service';
     NewFuncionarioComponent,
     ShowFuncionarioComponent,
     EditFuncionarioComponent,
-    NewEquipamentoComponent,
-    ShowEquipamentoComponent,
+    FormEquipamentoComponent,
+    ViewEquipamentoComponent,
     ListEquipamentoComponent,
-    EditEquipamentoComponent,
     DashboardComponent
   ],
   imports: [
@@ -48,7 +44,6 @@ import { EquipamentoService } from './equipamento/equipamento.service';
   providers: [
     AppService,
     FuncionarioService,
-    EquipamentoService,
     ApiService
   ],
   bootstrap: [AppComponent]
