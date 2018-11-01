@@ -11,6 +11,11 @@ import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-eq
 import { NewEquipamentoComponent } from './equipamento/new-equipamento/new-equipamento.component';
 import { ShowEquipamentoComponent } from './equipamento/show-equipamento/show-equipamento.component';
 
+import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
+import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.component';
+import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component';
+import { ListClienteComponent } from './cliente/list-cliente/list-cliente.component';
+import { ClienteService } from './cliente/cliente.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

@@ -22,7 +22,11 @@ export class NewEquipamentoComponent implements OnInit{
 
     this.equipamentoService.add(JSON.stringify(
       new Equipamento(form.name, form.peso,
+<<<<<<< HEAD
         form.tipo)))
+=======
+        form.tipo, form.descricao)))
+>>>>>>> origin/master
       .subscribe((result) => {console.log(result);
                   alert('Equipamento cadastrado!');
     this.router.navigate(['equipamentos/', result['id']]);

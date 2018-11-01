@@ -11,7 +11,7 @@ import { Funcionario } from '../funcionario';
   templateUrl: './show-funcionario.component.html',
   styleUrls: ['./show-funcionario.component.css']
 })
-export class ShowFuncionarioComponent implements OnInit{
+export class ShowFuncionarioComponent implements OnInit {
 
   public funcionario: any = {};
   public id: number;
@@ -35,11 +35,11 @@ export class ShowFuncionarioComponent implements OnInit{
           }
         });
       };
-  });
-}
-edit(){
-  this.router.navigate(['/funcionarios/', this.id]);
-  return false;
-}
+    });
+  }
+  edit() {
+    this.router.navigate(['/funcionarios/', this.id]);
+    return false;
+  }
 
 }

@@ -24,6 +24,15 @@ import { ShowEquipamentoComponent } from './equipamento/show-equipamento/show-eq
 import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-equipamento.component';
 import { EditEquipamentoComponent } from './equipamento/edit-equipamento/edit-equipamento.component';
 import { EquipamentoService } from './equipamento/equipamento.service';
+<<<<<<< HEAD
+=======
+
+import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
+import { ListClienteComponent } from './cliente/list-cliente/list-cliente.component';
+import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component';
+import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.component';
+import { ClienteService } from './cliente/cliente.service';
+>>>>>>> origin/master
 
 @NgModule({
   declarations: [
@@ -36,6 +45,13 @@ import { EquipamentoService } from './equipamento/equipamento.service';
     ShowEquipamentoComponent,
     ListEquipamentoComponent,
     EditEquipamentoComponent,
+<<<<<<< HEAD
+=======
+    NewClienteComponent,
+    ListClienteComponent,
+    ShowClienteComponent,
+    EditClienteComponent,
+>>>>>>> origin/master
     DashboardComponent
   ],
   imports: [
@@ -49,6 +65,10 @@ import { EquipamentoService } from './equipamento/equipamento.service';
     AppService,
     FuncionarioService,
     EquipamentoService,
+<<<<<<< HEAD
+=======
+    ClienteService,
+>>>>>>> origin/master
     ApiService
   ],
   bootstrap: [AppComponent]
