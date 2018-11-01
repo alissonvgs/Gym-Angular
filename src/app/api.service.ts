@@ -6,6 +6,7 @@ import { RequestOptions, Headers, RequestMethod, RequestOptionsArgs } from '@ang
 @Injectable()
 export class ApiService {
 
+  // tslint:disable-next-line:no-inferrable-types
   url: string = 'http://localhost:4200/api/';
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

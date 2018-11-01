@@ -1,23 +1,59 @@
+
+
+<h1>Dados de {{funcionario.name}}</h1>
+
+<div class="form">
+<table class="table table-striped">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Nome:</th>
+      <td>{{funcionario.name}}</td>
+      </tr>
+    <tr>
+      <th scope="row">CPF</th>
+      <td>{{funcionario.cpf}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Data de Nascimento</th>
+      <td>{{funcionario.dataNascimento}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Telefone</th>
+      <td>{{funcionario.telefone}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td>{{funcionario.email}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Endereço</th>
+      <td>{{funcionario.endereco}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Salário</th>
+      <td>{{funcionario.salario}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Carga Horária</th>
+      <td>{{funcionario.cargaHoraria}}</td>
+    </tr>
+  </tbody>
+</table>
+
 <div class="container-fluid"><div id="showPanel" *ngIf="funcionario">
-  <p>
-    <strong> 
-      dados de: {{funcionario.name}}
-    </strong>
-    </p>
 
-  <p>
-  <strong>Data de Nascimento:</strong>
-    {{funcionario.dataNascimento}}
-  </p>
-  <p>
-  <strong>CPF:</strong>
-    {{funcionario.cpf}}
-  </p>
-
-  <div>
-    <button type="submit" class="btn btn-primary">Deletar</button>
+  <div style="margin-left: 40%">
+    <button type="button" href="#" (click)="destroy(funcionario.id)" class="btn btn-danger">Deletar</button>
+    <a [routerLink] = "['/funcionarios/edit/', funcionario.id]"><button type="button" href="#" (click)="edit(funcionario.id)" class="btn btn-secondary">Editar</button></a> 
+    <a [routerLink]="['/funcionarios'] "><button type="button" href="#" class="btn btn-primary">Voltar</button></a>
     </div>
+    <div class="btn-group-sm" role="group" aria-label="Basic example">
+
+      </div>
 
 
-  <a [routerLink] = "['/funcionarios/edit/', funcionario.id]">Editar</a> || <a [routerLink]="['/funcionarios'] ">Voltar</a>
+</div>
+
 </div>
