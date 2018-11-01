@@ -1,20 +1,22 @@
-import { Injectable } from '@angular/core';
-import { AppService } from 'app/app.service';
-import { ApiService } from 'app/api.service';
-import { Observable } from 'rxjs';
+import { Injectable, OnInit } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+
+import { AppService } from '../app.service';
+import { ApiService } from '../api.service';
+import { RequestOptions, Headers } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+
 import { Cliente } from './cliente';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ClienteService {
+@Injectable()
+export class ClienteService implements OnInit {
 
   constructor(private appService: AppService, private apiService: ApiService) {}
   ngOnInit() {
   }
-  add(cliente): any {
+  add(clientej): any {
 
-    return this.apiService.post('clientes', cliente);
+    return this.apiService.post('clientes', clientej);
   }
 
   getById(id: any): Observable<any>{

@@ -1,3 +1,4 @@
+///<reference path="../cliente.ts"/>
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ClienteService } from '../cliente.service';

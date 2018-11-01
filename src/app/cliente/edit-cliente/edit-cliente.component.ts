@@ -22,14 +22,14 @@ export class EditClienteComponent implements OnInit {
     this.route.params
     .subscribe(params => {const id = params['id'];
       if (id) {
-        this.clienteService.getById(id).subscribe((func: any) => {
-          if (func) {
-            this.cliente = func;
+        this.clienteService.getById(id).subscribe((clie: any) => {
+          if (clie) {
+            this.cliente = clie;
             this.id = id;
 
           } else {
-            console.log(`Funcionario with id '${id}' not found, returning to list`);
-            this.router.navigate(['/funcionarios']);
+            console.log(`Clientes with id '${id}' not found, returning to list`);
+            this.router.navigate(['/clientes']);
           }
         });
       };

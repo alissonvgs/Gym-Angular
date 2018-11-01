@@ -1,3 +1,4 @@
+import { Cliente } from './../cliente';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ClienteService } from '../cliente.service';
