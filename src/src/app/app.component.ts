@@ -16,5 +16,4 @@ export class AppComponent {
     service.messageChanged$.subscribe(
       message => this.message = message);
   }
-
 }

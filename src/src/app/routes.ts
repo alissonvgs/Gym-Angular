@@ -9,6 +9,11 @@ import { ListFuncionarioComponent } from './funcionario/list-funcionario/list-fu
 import { NewFuncionarioComponent } from './funcionario/new-funcionario/new-funcionario.component';
 import { ShowFuncionarioComponent } from './funcionario/show-funcionario/show-funcionario.component';
 import { EditFuncionarioComponent } from './funcionario/edit-funcionario/edit-funcionario.component';
+
+import { ListAcademiaComponent } from './academia/list-academia/list-academia.component';
+import { NewAcademiaComponent } from './academia/new-academia/new-academia.component';
+import { ShowAcademiaComponent } from './academia/show-academia/show-academia.component';
+import { EditAcademiaComponent } from './academia/edit-academia/edit-academia.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 
@@ -22,6 +27,12 @@ export const routes: Routes = [
   { path: 'funcionarios/new', component: NewFuncionarioComponent},
   { path: 'funcionarios/:id', component: ShowFuncionarioComponent},
   { path: 'funcionarios/edit/:id', component: EditFuncionarioComponent},
+  { path: 'dashboard', component: DashboardComponent},
+
+  { path: 'academias' , component: ListAcademiaComponent},
+  { path: 'academias/new', component: NewAcademiaComponent},
+  { path: 'academias/:id', component: ShowAcademiaComponent},
+  { path: 'academias/edit/:id', component: EditAcademiaComponent},
   { path: 'dashboard', component: DashboardComponent}
 
 

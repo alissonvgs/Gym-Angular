@@ -22,6 +22,13 @@ import { FormEquipamentoComponent } from './equipamento/form-equipamento/form-eq
 import { ViewEquipamentoComponent } from './equipamento/view-equipamento/view-equipamento.component';
 import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-equipamento.component';
 
+import { ListAcademiaComponent } from './academia/list-academia/list-academia.component';
+import { NewAcademiaComponent } from './academia/new-academia/new-academia.component';
+import { AcademiaService } from './academia/academia.service';
+import { ShowAcademiaComponent } from './academia/show-academia/show-academia.component';
+import { EditAcademiaComponent } from './academia/edit-academia/edit-academia.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +39,10 @@ import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-eq
     FormEquipamentoComponent,
     ViewEquipamentoComponent,
     ListEquipamentoComponent,
+    ListAcademiaComponent,
+    NewAcademiaComponent,
+    ShowAcademiaComponent,
+    EditAcademiaComponent,
     DashboardComponent
   ],
   imports: [
@@ -44,7 +55,8 @@ import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-eq
   providers: [
     AppService,
     FuncionarioService,
-    ApiService
+    ApiService,
+    AcademiaService
   ],
   bootstrap: [AppComponent]
 })
