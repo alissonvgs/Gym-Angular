@@ -18,7 +18,7 @@ export const routes: Routes = [
   { path: 'equipamentos' , component: ListEquipamentoComponent},
   { path: 'equipamentos/new', component: NewEquipamentoComponent},
   { path: 'equipamentos/:id', component: ShowEquipamentoComponent},
-  { path: 'equipamento/edit/:id', component: EditEquipamentoComponent},
+  { path: 'equipamentos/edit/:id', component: EditEquipamentoComponent},
 
   { path: 'funcionarios' , component: ListFuncionarioComponent},
   { path: 'funcionarios/new', component: NewFuncionarioComponent},

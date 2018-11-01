@@ -34,12 +34,12 @@ export class EquipamentoService implements OnInit {
 
   delete(id: number): any {
     console.log('delete service');
-    return this.apiService.delete('equipamentos', id);
+    return this.apiService.delete('equipamentos/', id);
   }
 
   update(newEquipamento: Equipamento, id: number) {
-    return this.apiService.put('equipamentos', id);
-  }
+    return this.apiService.put('equipamentos/' + id , newEquipamento);
+}
 
 
   getAll(endpoint: any): any {
