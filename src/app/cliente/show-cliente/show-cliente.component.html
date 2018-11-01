@@ -1,0 +1,23 @@
+<div class="container-fluid"><div id="showPanel" *ngIf="cliente">
+  <p>
+    <strong> 
+      dados de: {{cliente.name}}
+    </strong>
+    </p>
+
+  <p>
+  <strong>Data de Nascimento:</strong>
+    {{cliente.dataNascimento}}
+  </p>
+  <p>
+  <strong>CPF:</strong>
+    {{cliente.cpf}}
+  </p>
+
+  <div>
+    <button type="submit" class="btn btn-primary">Deletar</button>
+    </div>
+
+
+  <a [routerLink] = "['/clientes/edit/', cliente.id]">Editar</a> || <a [routerLink]="['/clientes'] ">Voltar</a>
+</div>

@@ -6,6 +6,7 @@
 /out-tsc
 
 # dependencies
+/node_modules
 
 # IDEs and editors
 /.idea
@@ -16,10 +17,7 @@
 .settings/
 *.sublime-workspace
 
-# IDE - VSCode
-
-
-# misc
+# IDE - # misc
 /.sass-cache
 /connect.lock
 /coverage
@@ -28,7 +26,6 @@ npm-debug.log
 testem.log
 /typings
 
-# e2e
 
 
 # System Files
