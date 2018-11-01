@@ -6,10 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { routes } from './routes';
 import {APP_BASE_HREF} from '@angular/common';
 
-import { EquipamentoService } from '../app/equipamento/shared/equipamento.service';
+import { EquipamentoService } from '../app/equipamento/equipamento.service';
 import { ListEquipamentoComponent } from './equipamento/list-equipamento/list-equipamento.component';
-import { FormEquipamentoComponent } from './equipamento/form-equipamento/form-equipamento.component';
-import { ViewEquipamentoComponent } from './equipamento/view-equipamento/view-equipamento.component';
+import { NewEquipamentoComponent } from './equipamento/new-equipamento/new-equipamento.component';
+import { ShowEquipamentoComponent } from './equipamento/show-equipamento/show-equipamento.component';
 
 
 describe('AppComponent', () => {
@@ -18,8 +18,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         ListEquipamentoComponent,
-        FormEquipamentoComponent,
-        ViewEquipamentoComponent
+        NewEquipamentoComponent,
+        ShowEquipamentoComponent
       ],
       imports:[
         RouterModule.forRoot(routes),

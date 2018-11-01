@@ -2,24 +2,26 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { routes } from '../../routes';
-import { AppService } from '../../app.service';
-import { EquipamentoService } from '../shared/equipamento.service';
 
-import { FormEquipamentoComponent } from '../form-equipamento/form-equipamento.component';
+import { ShowEquipamentoComponent } from './show-equipamento.component';
+import { NewEquipamentoComponent } from '../new-equipamento/new-equipamento.component';
 import { ListEquipamentoComponent } from '../list-equipamento/list-equipamento.component';
-import { ViewEquipamentoComponent } from './view-equipamento.component';
+import { routes } from '../../routes';
+import { EquipamentoService } from '../equipamento.service';
+import { EditEquipamentoComponent } from '../edit-equipamento/edit-equipamento.component';
+import { AppService } from '../../app.service';
 
-describe('ViewEquipamentoComponent', () => {
-  let component: ViewEquipamentoComponent;
-  let fixture: ComponentFixture<ViewEquipamentoComponent>;
+describe('ShowEquipamentoComponent', () => {
+  let component: ShowEquipamentoComponent;
+  let fixture: ComponentFixture<ShowEquipamentoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        FormEquipamentoComponent,
+        NewEquipamentoComponent,
+        ShowEquipamentoComponent,
         ListEquipamentoComponent,
-        ViewEquipamentoComponent
+        EditEquipamentoComponent
       ],
       imports: [
         RouterModule.forRoot(routes),
@@ -35,7 +37,7 @@ describe('ViewEquipamentoComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewEquipamentoComponent);
+    fixture = TestBed.createComponent(ShowEquipamentoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

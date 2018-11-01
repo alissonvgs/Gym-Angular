@@ -3,15 +3,15 @@ import 'rxjs/add/operator/switchMap';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
-import {EquipamentoService} from '../shared/equipamento.service';
-import { Equipamento } from '../shared/equipamento';
+import { EquipamentoService } from '../equipamento.service';
+import { Equipamento } from '../equipamento';
 
 @Component({
-  selector: 'app-view-equipamento',
-  templateUrl: './view-equipamento.component.html',
-  styleUrls: ['./view-equipamento.component.css']
+  selector: 'app-show-equipamento',
+  templateUrl: './show-equipamento.component.html',
+  styleUrls: ['./show-equipamento.component.css']
 })
-export class ViewEquipamentoComponent implements OnInit {
+export class ShowEquipamentoComponent implements OnInit{
 
   public equipamento: any = {};
   public id: number;
@@ -22,7 +22,7 @@ export class ViewEquipamentoComponent implements OnInit {
     private equipamentoService: EquipamentoService) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params =>{
+    this.route.params.subscribe(params => {
       const id = params['id'];
       if (id) {
         this.equipamentoService.getById(id).subscribe((equipamento: any) => {
@@ -35,11 +35,11 @@ export class ViewEquipamentoComponent implements OnInit {
           }
         });
       };
-    });
-  }
-  edit(){
-    this.router.navigate(['/equipamentos/edit/', this.id]);
-    return false;
-  }
+  });
+}
+edit(){
+  this.router.navigate(['/equipamentos/', this.id]);
+  return false;
+}
 
 }

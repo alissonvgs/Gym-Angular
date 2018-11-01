@@ -1,9 +1,9 @@
 export class Equipamento {
-
     constructor(
         public name: string,
-        public peso: number,
+        public peso: string,
         public tipo: string,
-        public descricao: string
+       /* public descricao: String
+*/
         ) {}
-}
+  }

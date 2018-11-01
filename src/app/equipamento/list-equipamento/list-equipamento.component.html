@@ -1,29 +1,37 @@
-<div class="container-fluid"><h1>equipamento <button href="#" [routerLink]="['/equipamento', 'new']" type="button" class="btn btn-primary">
-  Adicionar
-</button></h1>
+<div class="container-fluid"><h1>Equipamentos <button href="#" [routerLink]="['/equipamentos', 'new']" type="button" class="btn btn-primary">
+    Adicionar
+  </button></h1>
 
-<div id="notificationMessage" *ngIf="equipamento.length == 0" class="alert alert-da" role="alert">
-    Lista de equipamento vazia
-  </div>
+  <div id="notificationMessage" *ngIf="!equipamentos" class="alert alert-da" role="alert">
+      Lista de equipamentos vazia
+    </div>
 
-<table *ngIf="equipamento.length >= 1" class="table">
-    <thead>
-      <tr>
-        <th scope="col">name</th>
-        <th scope="col">CPF</th>
-        <th scope="col">Opções</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let equipamento of equipamentos">
-        <th scope="row">{{equipamento.id}}</th>
-        <td>{{equipamento.name}}</td>
-        <td>{{equipamento.cpf}}</td>
-        <td>{{ equipamento.datanascimento</td>
+  <table *ngIf="equipamentos" class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Peso</th>
+          <th scope="col">Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let equipamento of equipamentos">
+          <th scope="row">{{equipamento.id}}</th>
+          <td>{{equipamento.name}}</td>
+          <td>{{equipamento.peso}}</td>
+          <td>{{ equipamento.tipo }}</td>
+          
 
+          <td>
+            <div class="btn-group-sm" role="group" aria-label="Basic example">
+            <button type="button" href="#" (click)="show(equipamento.id)" class="btn btn-secondary">Visualizar</button>
+            <button type="button" href="#" (click)="edit(equipamento.id)" class="btn btn-secondary">Editar</button>
+            <button type="button" href="#" (click)="destroy(equipamento.id)" class="btn btn-secondary">Deletar</button>
+            </div>
+          </td>
 
-      </tr>
-    </tbody>
-  </table>
-
+        </tr>
+      </tbody>
+    </table>
 </div>
