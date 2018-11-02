@@ -57,5 +57,4 @@ export class ListEquipamentoComponent implements OnInit {
     }
     return false;
   }
-
 }

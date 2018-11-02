@@ -16,13 +16,19 @@ import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component
 import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.component';
 import { EditClienteComponent } from './cliente/edit-cliente/edit-cliente.component';
 
+import { ListAcademiaComponent } from './academia/list-academia/list-academia.component';
+import { NewAcademiaComponent } from './academia/new-academia/new-academia.component';
+import { ShowAcademiaComponent } from './academia/show-academia/show-academia.component';
+import { EditAcademiaComponent } from './academia/edit-academia/edit-academia.component';
+
+
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
 
   { path: 'equipamentos', component: ListEquipamentoComponent },
   { path: 'equipamentos/new', component: NewEquipamentoComponent },
   { path: 'equipamentos/:id', component: ShowEquipamentoComponent },
-  { path: 'equipamento/edit/:id', component: EditEquipamentoComponent },
+  { path: 'equipamentos/edit/:id', component: EditEquipamentoComponent },
 
   { path: 'funcionarios', component: ListFuncionarioComponent },
   { path: 'funcionarios/new', component: NewFuncionarioComponent },
@@ -33,6 +39,11 @@ export const routes: Routes = [
   { path: 'clientes/new', component: NewClienteComponent },
   { path: 'clientes/:id', component: ShowClienteComponent },
   { path: 'clientes/edit/:id', component: EditClienteComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+
+  { path: 'academias' , component: ListAcademiaComponent},
+  { path: 'academias/new', component: NewAcademiaComponent},
+  { path: 'academias/:id', component: ShowAcademiaComponent},
+  { path: 'academias/edit/:id', component: EditAcademiaComponent}
 
 ];

@@ -31,6 +31,12 @@ import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component
 import { ShowClienteComponent } from './cliente/show-cliente/show-cliente.component';
 import { ClienteService } from './cliente/cliente.service';
 
+import { ListAcademiaComponent } from './academia/list-academia/list-academia.component';
+import { NewAcademiaComponent } from './academia/new-academia/new-academia.component';
+import { AcademiaService } from './academia/academia.service';
+import { ShowAcademiaComponent } from './academia/show-academia/show-academia.component';
+import { EditAcademiaComponent } from './academia/edit-academia/edit-academia.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +52,10 @@ import { ClienteService } from './cliente/cliente.service';
     ListClienteComponent,
     ShowClienteComponent,
     EditClienteComponent,
+    ListAcademiaComponent,
+    NewAcademiaComponent,
+    ShowAcademiaComponent,
+    EditAcademiaComponent,
     DashboardComponent
   ],
   imports: [
@@ -60,6 +70,7 @@ import { ClienteService } from './cliente/cliente.service';
     FuncionarioService,
     EquipamentoService,
     ClienteService,
+    AcademiaService,
     ApiService
   ],
   bootstrap: [AppComponent]

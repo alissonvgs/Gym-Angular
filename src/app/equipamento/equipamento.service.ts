@@ -38,8 +38,8 @@ export class EquipamentoService implements OnInit {
   }
 
   update(newEquipamento: Equipamento, id: number) {
-    return this.apiService.put('equipamentos' + id, newEquipamento);
-  }
+    return this.apiService.put('equipamentos/' + id , newEquipamento);
+}
 
 
   getAll(endpoint: any): any {

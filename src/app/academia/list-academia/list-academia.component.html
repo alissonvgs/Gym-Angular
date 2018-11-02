@@ -1,0 +1,44 @@
+<div class="container-fluid" style="color: yellow">
+
+    
+            <h1 style = "text-align: center">Academias </h1>
+            
+  <div id="notificationMessage" *ngIf="!academias" class="alert alert-da" role="alert">
+      Lista de academias vazia
+    </div>
+<div class="form">
+  <table *ngIf="academias" class="table table-striped"  style="text-align: center" >
+      <thead>
+        <tr style="color:black">
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Contato</th>
+          <th scope="col">Endereço</th>
+          <th scope="col">Opções</th>
+        </tr>
+      </thead>
+      <tbody style="color: black;" >
+        <tr *ngFor="let academia of academias" style="background-color: white">
+          <th scope="row">{{academia.id}}</th>
+          <td>{{academia.name}}</td>
+          <td>{{academia.contato}}</td>
+          <td>{{academia.endereco}}</td>
+          
+
+          <td>
+            <div class="btn-group-sm" role="group" aria-label="Basic example">
+            <button type="button" href="#" (click)="show(academia.id)" class="btn btn-success">Visualizar</button>
+            <button type="button" href="#" (click)="edit(academia.id)" class="btn btn-secondary">Editar</button>
+            <button type="button" href="#" (click)="destroy(academia.id)" class="btn btn-danger">Deletar</button>
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+    <button href="#" [routerLink]="['/academias', 'new']" type="button" class="btn btn-warning" style="margin-left: 47%">
+      Adicionar
+    </button>
+</div>
+</div>
