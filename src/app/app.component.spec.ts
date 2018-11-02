@@ -17,6 +17,12 @@ import { NewClienteComponent } from './cliente/new-cliente/new-cliente.component
 import { ListClienteComponent } from './cliente/list-cliente/list-cliente.component';
 import { ClienteService } from './cliente/cliente.service';
 
+import { ListAcademiaComponent } from './academia/list-academia/list-academia.component';
+import { NewAcademiaComponent } from './academia/new-academia/new-academia.component';
+import { AcademiaService } from './academia/academia.service';
+import { ShowAcademiaComponent } from './academia/show-academia/show-academia.component';
+import { EditAcademiaComponent } from './academia/edit-academia/edit-academia.component';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -24,7 +30,15 @@ describe('AppComponent', () => {
         AppComponent,
         ListEquipamentoComponent,
         NewEquipamentoComponent,
-        ShowEquipamentoComponent
+        ShowEquipamentoComponent,
+        EditClienteComponent,
+        ShowClienteComponent,
+        NewClienteComponent,
+        ListClienteComponent,
+        ListAcademiaComponent,
+        NewAcademiaComponent,
+        ShowAcademiaComponent,
+        EditAcademiaComponent
       ],
       imports:[
         RouterModule.forRoot(routes),
@@ -33,7 +47,9 @@ describe('AppComponent', () => {
       providers: [
         {provide: APP_BASE_HREF, useValue : '/' },
         EquipamentoService,
-        AppService
+        AppService,
+        ClienteService,
+        AcademiaService
 ]
     }).compileComponents();
   }));

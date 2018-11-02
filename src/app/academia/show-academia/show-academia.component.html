@@ -1,0 +1,38 @@
+<h1>Dados de {{academia.name}}</h1>
+
+<div class="form">
+<table class="table table-striped">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Id:</th>
+      <td>{{academia.id}}</td>
+      </tr>
+    <tr>
+      <th scope="row">Nome</th>
+      <td>{{academia.nome}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Contato</th>
+      <td>{{academia.contato}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Endereço</th>
+      <td>{{academia.endereco}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="container-fluid"><div id="showPanel" *ngIf="academia">
+
+  <div style="margin-left: 40%">
+    <button type="button" href="#" (click)="destroy(academia.id)" class="btn btn-danger">Deletar</button>
+    <a [routerLink] = "['/academias/edit/', academia.id]"><button type="button" href="#" (click)="edit(academia.id)" class="btn btn-secondary">Editar</button></a> 
+    <a [routerLink]="['/academias'] "><button type="button" href="#" class="btn btn-primary">Voltar</button></a>
+    </div>
+    <div class="btn-group-sm" role="group" aria-label="Basic example">
+
+      </div>
+</div>
+</div>
